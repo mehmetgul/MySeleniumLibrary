@@ -3,6 +3,8 @@ package mehmetgul.mylib;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+//Safari Driver  setup in MAC OS
+
 public class DemoSafariDriver {
 	public static void main(String[] args) {
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 //if there is space in class name we will get error of Compound class name not permitted.
 
-public class SalesForceExample {
+public class SendKeysMetohd {
 	public static void main(String[] args) {
 
 

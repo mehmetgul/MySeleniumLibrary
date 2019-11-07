@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Chrome Driver setup in MAC OS
+
 public class DemoChromeDriver {
 
 	public static void main(String[] args) {

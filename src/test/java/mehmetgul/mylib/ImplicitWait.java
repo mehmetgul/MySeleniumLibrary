@@ -5,8 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
-
 import java.util.concurrent.TimeUnit;
+
+//Implicit wait till the given time limit to load the page.
+// if the page loads early then it will not wait till the given limit.
+
 
 public class ImplicitWait {
 	public static void main(String[] args) {

@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.BrowserFactory;
 
+//Using explicit wait in specific location
+// it waits in given limits until the target loads.
+
 public class ExplicitWait {
 	public static void main(String[] args) {
 
@@ -31,7 +34,7 @@ public class ExplicitWait {
 
 
 		//Explicit wait. this waits 20 sec till the target element visible.
-		// you can use different methods like elemenToBeClickable() .. this means it will wait targer be in clickable condition
+		// you can use different methods like elemenToBeClickable() .. this means it will wait target be in clickable condition
 		WebDriverWait d = new WebDriverWait(driver,10);
 		d.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Click for more information about Salisbury Hotel')]")));
 

@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Using navigate method to navigate between pages.
+
 public class NavigateToOtherPages {
 	public static void main(String[] args) {
 		//Setting up ChromeDriver via Maven dependencies.

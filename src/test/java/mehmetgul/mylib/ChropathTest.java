@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
+// Downloading the chropath extention to chrome browser and getting the xpath from cropath.
+
 public class ChropathTest {
 	public static void main(String[] args) {
 

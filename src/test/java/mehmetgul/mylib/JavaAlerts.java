@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
+//Handling javaScript Alerts.
+//javaScript Alerts are not and html alerts so we need to handle them
+
 public class JavaAlerts {
 	public static void main(String[] args) {
 

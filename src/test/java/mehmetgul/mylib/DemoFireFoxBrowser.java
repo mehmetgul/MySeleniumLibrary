@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+//Firefox Driver  setup in MAC OS
+
 public class DemoFireFoxBrowser {
 
 	public static void main(String[] args) {

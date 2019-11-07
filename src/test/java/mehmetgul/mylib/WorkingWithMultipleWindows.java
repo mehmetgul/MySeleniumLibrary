@@ -8,6 +8,10 @@ import utils.BrowserUtils;
 import java.util.Iterator;
 import java.util.Set;
 
+//While testing when you open multiple windows/tabs and
+// when you want to navigate and retrieve data from this pages.
+
+
 public class WorkingWithMultipleWindows {
 	public static void main(String[] args) {
 

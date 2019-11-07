@@ -25,6 +25,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+//Using different locators.
+
 public class Locators {
 	public static void main(String[] args) {
 		//Setting up FireFoxDriver via Maven dependencies.

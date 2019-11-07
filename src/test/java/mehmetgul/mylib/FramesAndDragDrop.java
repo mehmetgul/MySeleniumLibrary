@@ -7,6 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
+// 1- Handling iFrames: iFrames are different pages which are embedded inside the pages.
+// 2- Handling drag and drop using dragAndDrop () method.
+
 public class FramesAndDragDrop {
 	public static void main(String[] args) {
 
