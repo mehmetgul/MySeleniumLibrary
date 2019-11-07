@@ -21,6 +21,8 @@ public class FramesAndDragDrop {
 		//switching to the frame using switchTo
 		WebElement wElement = driver.findElement(By.xpath("//iframe[@class='demo-frame']"));
 		driver.switchTo().frame(wElement);
+
+		//after switching to iframe. Clock on the drag box
 		driver.findElement(By.xpath("//p[contains(text(),'Drag me to my target')]")).click();
 
 		//Creating actions class object to use drag drop
