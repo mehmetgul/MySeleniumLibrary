@@ -1,10 +1,11 @@
-package tests.dogan;
+package dogan;
 
+import dogan.CheckBox;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FormyCheckBoxTestCase extends CheckBox  {
+public class FormyCheckBoxTestCase extends CheckBox {
 	// inheritance
 	// extends keyword to connect to class each for using its methods variables ,
 	// Test cases only

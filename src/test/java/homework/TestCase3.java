@@ -1,8 +1,8 @@
-package tests.homework;
+package homework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import tests.utils.BrowserFactory;
+import utils.BrowserFactory;
 
 public class TestCase3 {
 	public static void main(String[] args) {

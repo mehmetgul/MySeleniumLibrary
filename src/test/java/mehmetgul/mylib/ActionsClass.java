@@ -1,4 +1,4 @@
-package tests.mehmetgul.mylib;
+package mehmetgul.mylib;
 
 // How to MouseOver on object with Selenium
 //Performing Mouse and Keyboard interactions with Selenium
@@ -11,7 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import tests.utils.BrowserFactory;
+import utils.BrowserFactory;
 
 public class ActionsClass {
 	public static void main(String[] args) throws InterruptedException {

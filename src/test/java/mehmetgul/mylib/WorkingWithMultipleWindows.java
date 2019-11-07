@@ -1,9 +1,9 @@
-package tests.mehmetgul.mylib;
+package mehmetgul.mylib;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import tests.utils.BrowserFactory;
-import tests.utils.BrowserUtils;
+import utils.BrowserFactory;
+import utils.BrowserUtils;
 
 import java.util.Iterator;
 import java.util.Set;

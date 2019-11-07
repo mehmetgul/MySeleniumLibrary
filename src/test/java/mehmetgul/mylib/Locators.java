@@ -1,4 +1,4 @@
-package tests.mehmetgul.mylib;
+package mehmetgul.mylib;
 
 
 

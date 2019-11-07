@@ -1,11 +1,11 @@
-package tests.mehmetgul.mylib;
+package mehmetgul.mylib;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import tests.utils.BrowserFactory;
-import tests.utils.BrowserUtils;
+import utils.BrowserFactory;
+import utils.BrowserUtils;
 
 public class FramesAndDragDrop {
 	public static void main(String[] args) {

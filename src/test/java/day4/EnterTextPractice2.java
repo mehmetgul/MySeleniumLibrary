@@ -1,10 +1,10 @@
-package tests.day4;
+package day4;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import tests.utils.BrowserFactory;
+import utils.BrowserFactory;
 
 public class EnterTextPractice2 {
 

@@ -1,4 +1,4 @@
-package tests.gmail;
+package gmail;
 
 import org.apache.commons.mail.SimpleEmail;
 

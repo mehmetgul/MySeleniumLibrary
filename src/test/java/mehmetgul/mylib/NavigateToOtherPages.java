@@ -1,4 +1,4 @@
-package tests.mehmetgul.mylib;
+package mehmetgul.mylib;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

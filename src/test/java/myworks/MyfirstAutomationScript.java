@@ -1,4 +1,4 @@
-package tests.myworks;
+package myworks;
 
 
 import org.openqa.selenium.WebDriver;

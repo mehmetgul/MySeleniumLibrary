@@ -1,4 +1,4 @@
-package tests.gmail;
+package gmail;
 
 
 public class Credentials {

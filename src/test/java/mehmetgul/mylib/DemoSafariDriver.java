@@ -1,4 +1,4 @@
-package tests.mehmetgul.mylib;
+package mehmetgul.mylib;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;

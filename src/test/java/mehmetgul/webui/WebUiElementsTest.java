@@ -1,11 +1,12 @@
-package tests.mehmetgul.webui;
+package mehmetgul.webui;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import tests.utils.BrowserFactory;
-import tests.utils.BrowserUtils;
+import utils.BrowserFactory;
+import utils.BrowserUtils;
+import utils.BrowserUtils;
 
 public class WebUiElementsTest {
 	public static void main(String[] args) {

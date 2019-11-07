@@ -1,4 +1,4 @@
-package tests.dogan;
+package dogan;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

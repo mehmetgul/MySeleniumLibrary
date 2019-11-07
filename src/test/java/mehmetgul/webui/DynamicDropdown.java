@@ -1,9 +1,9 @@
-package tests.mehmetgul.webui;
+package mehmetgul.webui;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import tests.utils.BrowserFactory;
-import tests.utils.BrowserUtils;
+import utils.BrowserFactory;
+import utils.BrowserUtils;
 
 public class DynamicDropdown {
 	public static void main(String[] args) {
