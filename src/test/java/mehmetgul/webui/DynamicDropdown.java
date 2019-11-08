@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
+import java.util.concurrent.TimeUnit;
+
 public class DynamicDropdown {
 	public static void main(String[] args) {
 
@@ -14,7 +16,10 @@ public class DynamicDropdown {
 		WebDriver driver = BrowserFactory.getDriver("chrome");
 		driver.get("http://www.makemytrip.com");
 
-		BrowserUtils.wait(3000);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//head//link[18]")).click();
+
+		//BrowserUtils.wait(3000);
 		driver.findElement(By.xpath("//input[@id='fromCity']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='From']")).sendKeys("bang");
 
