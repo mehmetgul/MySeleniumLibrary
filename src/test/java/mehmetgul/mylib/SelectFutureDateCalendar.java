@@ -27,7 +27,7 @@ public class SelectFutureDateCalendar {
 
 		BrowserUtils.wait(2000);
 
-		//boolean month=driver.findElement(By.cssSelector("[class='datepicker-days'] th[class='datepicker-switch']")).getText().contains("May");
+
 
 		while (!driver.findElement(By.cssSelector("[class='datepicker-days'] th[class='datepicker-switch']")).getText().contains("May")) {
 			//this will click till finding the moth April.

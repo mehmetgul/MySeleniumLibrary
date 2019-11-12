@@ -55,7 +55,7 @@ public class AutoSuggestDropDown {
 
 			//After finding the desired value, click on it.
 			if(text.equalsIgnoreCase("BANGALORE INTERNATION AIRPORT")){
-				driver.findElement(By.xpath("//input[@id='fromPlaceName']")).click();
+				driver.findElement(By.xpath("//input[@id='fromPlaceName']")).sendKeys(Keys.ENTER);
 			}
 
 			System.out.println(i);
