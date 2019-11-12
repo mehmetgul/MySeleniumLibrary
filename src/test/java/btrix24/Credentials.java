@@ -1,8 +1,8 @@
 package btrix24;
 
 public class Credentials {
-	private String userName = "Enterusername";
-	private String passWord = "EnterPassword";
+	private String userName = "hr55@cybertekschool.com";
+	private String passWord = "UserUser";
 	public String getUserName(){
 		//returns username
 		return userName;

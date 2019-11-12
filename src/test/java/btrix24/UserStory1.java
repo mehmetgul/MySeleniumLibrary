@@ -9,7 +9,16 @@ import utils.BrowserFactory;
 import utils.BrowserUtils;
 
 import java.util.List;
-
+//1. User should be able to click on upload files icon to upload files and pictures from local disks,
+// download from external drive, select documents from bixtrix24, and create files to upload.
+//2. User should be able to add users from selecting contact from E-mail user, Employees and Departments and Recent contact lists.
+//3. User should be able to attach link by clicking on the link icon.
+//4. User should be able to insert videos by clicking on the video icon and entering the video URL.
+//5. User should be able to create a quote by clicking on the Comma icon.
+//6. User should be able to add mention by clicking on the Add mention icon and select contacts from the lists provided in dropdown.
+//7. User should be able to click on Visual Editor and see the editor text-bar displays on top of the message box.
+//8. User should be able to click on the Topic icon to see the Message Topic text box displays on top of the message box.
+//9. User should be able to click on "Record Video" tab to record a video and attach it with the message.
 
 public class UserStory1 {
 	static WebDriver driver = BrowserFactory.getDriver("chrome");
@@ -17,12 +26,12 @@ public class UserStory1 {
 	public static void main(String[] args) {
 		login();
 		BrowserUtils.wait(1000);
-		//	uploadFilesAndImages_1();
+		//uploadFilesAndImages_1();
 		//	selectDocumentFromBitrix24_1();
 		//selectContact();
-		//attachLink();
+		attachLink();
 		//instertVideo();
-		createQuote();
+		//createQuote();
 		//addMention();
 		//visualEditor();
 		//messageTopic();
@@ -37,9 +46,9 @@ public class UserStory1 {
 				passWord = obj.getPassWord();
 		driver.get("https://login1.nextbasecrm.com/");
 		BrowserUtils.wait(1000);
-		driver.findElement(By.xpath("//input[@placeholder='Login']")).sendKeys("hr55@cybertekschool.com");
+		driver.findElement(By.xpath("//input[@placeholder='Login']")).sendKeys(userName);
 		BrowserUtils.wait(1000);
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("UserUser");
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(passWord);
 		BrowserUtils.wait(1000);
 		driver.findElement(By.xpath("//input[@class='login-btn']")).click();
 	}
@@ -48,9 +57,9 @@ public class UserStory1 {
 	public static void uploadFilesAndImages_1() {
 		//clicking the message link under Activity Stream
 		driver.findElement(By.xpath("//span[contains(text(),'Message')]")).click();
-		BrowserUtils.wait(1000);
+		BrowserUtils.wait(3000);
 		driver.findElement(By.xpath("//span[@id='bx-b-uploadfile-blogPostForm']")).click();
-		BrowserUtils.wait(1000);
+		BrowserUtils.wait(3000);
 
 		//Location for the files to upload
 		String filePath = "/Users/mehmetgul/Desktop/lambda.jpeg";

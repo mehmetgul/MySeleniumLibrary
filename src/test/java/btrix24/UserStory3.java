@@ -19,10 +19,10 @@ public class UserStory3 {
 		//insertVideo();
 		//insertQuote();
 		//visualEditor();
-		//addEventAndSetReminder();
+		addEventAndSetReminder();
 		//selectEventLocation();
 		//addAttendies();
-		clickOnMoreToSpecifyEventDetails();
+		//clickOnMoreToSpecifyEventDetails();
 
 	}
 
