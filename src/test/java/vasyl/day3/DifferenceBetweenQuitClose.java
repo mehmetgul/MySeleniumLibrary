@@ -1,4 +1,4 @@
-package day3;
+package vasyl.day3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;

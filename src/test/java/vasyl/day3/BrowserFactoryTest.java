@@ -1,4 +1,4 @@
-package day3;
+package vasyl.day3;
 
 import org.openqa.selenium.WebDriver;
 import utils.BrowserFactory;

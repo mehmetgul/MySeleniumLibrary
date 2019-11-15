@@ -172,7 +172,7 @@ public class FormyTest {
 
 	@Test
 	public void  Sample() throws InterruptedException {
-		ArrayList<String > urls = new ArrayList<String>(Arrays.asList(
+		ArrayList<String > urls = new ArrayList<>(Arrays.asList(
 				"https://www.amazon.com",   // Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more
 				"https://www.google.com",   // Google
 				"https://www.facebook.com")); //

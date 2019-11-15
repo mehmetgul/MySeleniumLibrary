@@ -1,11 +1,9 @@
-package btrix24;
+package bitrix24testng;
 
+import bitrix24testng.login.Credentials;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
@@ -13,7 +11,7 @@ public class UserStory3 {
 	static WebDriver driver = BrowserFactory.getDriver("chrome");
 
 	public static void main(String[] args) {
-	//	login();
+		login();
 		//uploadImageAndFiles();
 		//attachLink();
 		//insertVideo();
@@ -26,7 +24,7 @@ public class UserStory3 {
 
 	}
 
-/*	public static void login() {
+	public static void login() {
 
 		Credentials obj = new Credentials();
 		String userName = obj.getUserName(),
@@ -38,7 +36,7 @@ public class UserStory3 {
 		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("UserUser");
 		BrowserUtils.wait(1000);
 		driver.findElement(By.xpath("//input[@class='login-btn']")).click();
-	}*/
+	}
 
 	//"1. User should be able to click on upload files icon to upload files and pictures from local disks,
 	// download from external drive, select documents from bixtrix24, and create files to upload.

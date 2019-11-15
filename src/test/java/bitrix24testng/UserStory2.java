@@ -1,19 +1,18 @@
-package btrix24;
+package bitrix24testng;
 
+import bitrix24testng.login.Credentials;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
-import java.util.List;
-
 public class UserStory2 {
 	static WebDriver driver = BrowserFactory.getDriver("chrome");
 
 	public static void main(String[] args) {
 
-	//	login();
+		login();
 
 		//highPriority();
 		//displayVisualEditor();
@@ -30,7 +29,7 @@ public class UserStory2 {
 	}
 
 
-/*	public static void login() {
+	public static void login() {
 
 		Credentials obj = new Credentials();
 		String userName = obj.getUserName(),
@@ -42,7 +41,7 @@ public class UserStory2 {
 		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("UserUser");
 		BrowserUtils.wait(1000);
 		driver.findElement(By.xpath("//input[@class='login-btn']")).click();
-	}*/
+	}
 
 	//Acceptance Cretiria 1
 	// User should be able to click on "High Priority" checkbox to set the current task to a top priority task.

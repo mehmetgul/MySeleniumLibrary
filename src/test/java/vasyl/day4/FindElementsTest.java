@@ -1,4 +1,4 @@
-package day4;
+package vasyl.day4;
 
 
 import org.openqa.selenium.By;
