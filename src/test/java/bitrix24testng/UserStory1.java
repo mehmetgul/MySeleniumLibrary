@@ -197,7 +197,11 @@ public class UserStory1 {
 		BrowserUtils.wait(1000);
 		clickFunction(element2);
 		BrowserUtils.wait(1000);
-		WebElement element3 = driver.findElement(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[2]/div[4]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/span[1]/span[1]/span[1]/span[1]"));
+		//Finding xpath of the link is difficult and here I am first choosing the upper xpath and will search the xpath inside this.
+		WebElement element3Narrowed= driver.findElement(By.xpath("//div[@class='feed-add-post-form-wrap']//tr[1]//td[3]"));
+		// I will search the xpath of minimized area.
+		WebElement element3=element3Narrowed.findElement(By.xpath("//span[@class='wd-fa-add-file-light-title-text diskuf-selector-link'][contains(text(),'Select document from Bitrix24')]"));
+		// WebElement element3 = driver.findElement(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[2]/div[4]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/span[1]/span[1]/span[1]/span[1]"));
 		element3.click();
 
 		BrowserUtils.wait(1000);
