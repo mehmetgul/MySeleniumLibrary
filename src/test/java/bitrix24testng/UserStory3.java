@@ -4,49 +4,120 @@ import bitrix24testng.login.Credentials;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
 public class UserStory3 {
-	static WebDriver driver = BrowserFactory.getDriver("chrome");
+	//global (instance) variables
+	private WebDriver driver = BrowserFactory.getDriver("chrome");
+	String basedURL = "https://login1.nextbasecrm.com/";
+	// locators
+	//Task tab xpath. This is required for all methods.
+	String e1, element = "//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]";
 
-	public static void main(String[] args) {
-		login();
-		//uploadImageAndFiles();
-		//attachLink();
-		//insertVideo();
-		//insertQuote();
-		//visualEditor();
-		addEventAndSetReminder();
-		//selectEventLocation();
-		//addAttendies();
-		//clickOnMoreToSpecifyEventDetails();
+	//Test Execution
+	@BeforeTest(description = "Log in to the give URL")
+	public void login() {
+		uLogin();
+	}
+
+	@AfterTest(description = "Quiting the browser")
+	public void quit() {
+		BrowserUtils.wait(4000);
+		driver.quit();
+	}
+
+	@Test
+	public void uploadImageAndFiles() {
+		e1 = "//span[@id='bx-b-uploadfile-blogPostForm_calendar']";
+		uUploadImageAndFiles(e1);
+	}
+
+	@Test
+	public void attachLink() {
+		e1 = "//span[@id='bx-b-link-blogPostForm_calendar']";
+		attachLink(e1);
 
 	}
 
-	public static void login() {
+	@Test
+	public void insertVideo() {
+		e1 = "//span[@id='bx-b-video-blogPostForm_calendar']";
+		insertVideo(e1);
+	}
+
+	@Test
+	public void insertQuote() {
+		e1 = "//span[@id='bx-b-quote-blogPostForm_calendar']";
+		insertQuote(e1);
+	}
+
+	@Test
+	public void visualEditor() {
+		e1 = "//span[@id='lhe_button_editor_blogPostForm_calendar']";
+		visualEditor(e1);
+
+	}
+
+	@Test
+	public void addEventAndSetReminder() {
+		uAddEventAndSetReminder();
+
+	}
+
+	@Test
+	public void selectEventLocation() {
+		e1 = "//input[@id='event-locationcal_3Jcl']";
+		selectEventLocation(e1);
+
+	}
+
+	@Test
+	public void addAttendies() {
+		e1 = "//a[@id='feed-event-dest-add-link']";
+		addAttendies(e1);
+	}
+
+	@Test
+	public void clickOnMoreToSpecifyEventDetails() {
+		e1 ="//span[@class='feed-event-more-link-text'][contains(text(),'More')]";
+		clickOnMoreToSpecifyEventDetails(e1);
+
+	}
+
+	//Methods
+	public void uLogin() {
 
 		Credentials obj = new Credentials();
+		obj.userRole("helpdesk");
 		String userName = obj.getUserName(),
 				passWord = obj.getPassWord();
-		driver.get("https://login1.nextbasecrm.com/");
+		driver.get(basedURL);
 		BrowserUtils.wait(1000);
-		driver.findElement(By.xpath("//input[@placeholder='Login']")).sendKeys("hr55@cybertekschool.com");
+		driver.findElement(By.xpath("//input[@placeholder='Login']")).sendKeys(userName);
 		BrowserUtils.wait(1000);
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("UserUser");
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(passWord);
 		BrowserUtils.wait(1000);
 		driver.findElement(By.xpath("//input[@class='login-btn']")).click();
 	}
 
+	public void clickFunction(String element) {
+		//clicking the Task link under Activity Stream
+		driver.findElement(By.xpath(element)).click();
+	}
+
+
 	//"1. User should be able to click on upload files icon to upload files and pictures from local disks,
 	// download from external drive, select documents from bixtrix24, and create files to upload.
-	public static void uploadImageAndFiles(){
+	public void uUploadImageAndFiles(String e1) {
 		BrowserUtils.wait(2000);
 		//clicking the TASK link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
-
+		clickFunction(element);
 		BrowserUtils.wait(3000);
-		driver.findElement(By.xpath("//span[@id='bx-b-uploadfile-blogPostForm_calendar']")).click();
+		clickFunction(e1);
 		BrowserUtils.wait(2000);
 
 		//Location for the files to upload
@@ -59,14 +130,13 @@ public class UserStory3 {
 
 
 	//2. User should be able to attach link by clicking on the link icon.
-	public static void attachLink(){
+	public void attachLink(String e1) {
 		BrowserUtils.wait(2000);
 		//clicking the TASK link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(3000);
-
-		driver.findElement(By.xpath("//span[@id='bx-b-link-blogPostForm_calendar']")).click();
+		clickFunction(e1);
 
 		BrowserUtils.wait(2000);
 		driver.findElement(By.xpath("//input[@id='linkoCalEditorcal_3Jcl-text']")).sendKeys("This is Link text");
@@ -77,14 +147,15 @@ public class UserStory3 {
 	}
 
 	//4. User should be able to insert videos by clicking on the video icon and entering the video URL.
-	public static void insertVideo(){
+	public void insertVideo(String e1) {
 		BrowserUtils.wait(2000);
 		//clicking the TASK link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(3000);
 
-		driver.findElement(By.xpath("//span[@id='bx-b-video-blogPostForm_calendar']")).click();
+		clickFunction(e1);
+		driver.findElement(By.xpath("")).click();
 		BrowserUtils.wait(2000);
 
 		//insertin video url
@@ -95,14 +166,14 @@ public class UserStory3 {
 	}
 
 	//5. User should be able to create a quote by clicking on the Comma icon.
-	public static void insertQuote(){
+	public void insertQuote(String e1) {
 		BrowserUtils.wait(2000);
 		//clicking the TASK link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(3000);
 
-		driver.findElement(By.xpath("//span[@id='bx-b-quote-blogPostForm_calendar']")).click();
+		clickFunction(e1);
 
 		//Creating webelement for swithcinh to iframe.
 		WebElement frameSwitch = driver.findElement(By.xpath("//div[@id='bx-html-editor-iframe-cnt-oCalEditorcal_3Jcl']//iframe[@class='bx-editor-iframe']"));
@@ -122,23 +193,23 @@ public class UserStory3 {
 
 
 	//6. User should be able to click on Visual Editor and see the editor text-bar displays on top of the message box.
-	public static void visualEditor(){
+	public void visualEditor(String e1) {
 		BrowserUtils.wait(2000);
 		//clicking the EVENT link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		//Clicking the Visual Editor button
 		BrowserUtils.wait(2000);
-		driver.findElement(By.xpath("//span[@id='lhe_button_editor_blogPostForm_calendar']")).click();
+		clickFunction(e1);
 
 	}
 
 	//7. User should be able to add Event start and ending date and time, and specify the time zone.
 	//8. User should be able to set reminder by entering the timeing.
-	public static void addEventAndSetReminder(){
+	public void uAddEventAndSetReminder() {
 		BrowserUtils.wait(2000);
 		//clicking the EVENT link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(2000);
 		driver.findElement(By.xpath("//input[@id='feed-cal-event-namecal_3Jcl']")).sendKeys("We have event.. please come");
@@ -194,8 +265,8 @@ public class UserStory3 {
 
 		//Setting up the Reminder
 
-		WebElement element=driver.findElement(By.xpath("//input[@id='event-remindercal_3Jcl']"));
-		if(!element.isEnabled()){
+		WebElement element = driver.findElement(By.xpath("//input[@id='event-remindercal_3Jcl']"));
+		if (!element.isEnabled()) {
 			element.click();
 		}
 		driver.findElement(By.xpath("//input[@id='event-remind_countcal_3Jcl']")).clear();
@@ -206,13 +277,13 @@ public class UserStory3 {
 
 
 	//9. User should be able to select event location from dropdown.
-	public static void selectEventLocation(){
+	public void selectEventLocation(String e1) {
 		BrowserUtils.wait(2000);
 		//clicking the EVENT link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(2000);
-		driver.findElement(By.xpath("//input[@id='event-locationcal_3Jcl']")).click();
+		clickFunction(e1);
 		BrowserUtils.wait(2000);
 
 		driver.findElement(By.xpath("//div[@id='bxecmr_2']")).click();
@@ -221,15 +292,15 @@ public class UserStory3 {
 	}
 
 	//10. User should be able to add attendees by selecting contacts individually or adding grups and departments.
-	public static void addAttendies(){
+	public void addAttendies(String e1) {
 
 		BrowserUtils.wait(2000);
 		//clicking the EVENT link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(2000);
 		//Clicking the Add more or Add persons, groups or department
-		driver.findElement(By.xpath("//a[@id='feed-event-dest-add-link']")).click();
+		clickFunction(e1);
 		BrowserUtils.wait(1000);
 
 		//Choosing from recent employee (All employee)
@@ -244,22 +315,21 @@ public class UserStory3 {
 		driver.findElement(By.xpath("//span[@class='popup-window-close-icon']")).click();
 
 
-
 	}
 
 	//11. Useer should be able to click on More to specify the event details.
-	public static void clickOnMoreToSpecifyEventDetails(){
+	public void clickOnMoreToSpecifyEventDetails(String e1) {
 
 		BrowserUtils.wait(2000);
 		//clicking the EVENT link
-		driver.findElement(By.xpath("//span[@id='feed-add-post-form-tab-calendar']//span[contains(text(),'Event')]")).click();
+		clickFunction(element);
 
 		BrowserUtils.wait(2000);
-		driver.findElement(By.xpath("//span[@class='feed-event-more-link-text'][contains(text(),'More')]")).click();
+		clickFunction(e1);
 		BrowserUtils.wait(2000);
 		driver.findElement(By.xpath("//*[@id=\"event-accessibilitycal_3Jcl\"]")).click();
 		BrowserUtils.wait(2000);
-		WebElement element= driver.findElement(By.xpath("//select[@id='event-accessibilitycal_3Jcl']"));
+		WebElement element = driver.findElement(By.xpath("//select[@id='event-accessibilitycal_3Jcl']"));
 
 		//Click the free option
 		driver.findElement(By.xpath("//select[@id='event-accessibilitycal_3Jcl']//option[contains(text(),'Free')]")).click();

@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
@@ -28,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 public class UserStory1 {
 
 	//global (instance) variables
-	WebDriver driver = BrowserFactory.getDriver("chrome");
+	private WebDriver driver = BrowserFactory.getDriver("chrome");
 	String basedURL = "https://login1.nextbasecrm.com/";
 
 
@@ -358,7 +356,7 @@ public class UserStory1 {
 		BrowserUtils.wait(2000);
 		driver.findElement(By.xpath("//span[@id='lhe_button_editor_blogPostForm']")).click();
 //
-
+////
 	}
 
 	public void messagingTopic() {
