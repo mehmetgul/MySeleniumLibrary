@@ -203,7 +203,7 @@ public class UserStory1 {
 		WebElement element3=element3Narrowed.findElement(By.xpath("//span[@class='wd-fa-add-file-light-title-text diskuf-selector-link'][contains(text(),'Select document from Bitrix24')]"));
 		// WebElement element3 = driver.findElement(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/form[1]/div[1]/div[1]/div[2]/div[4]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/span[1]/span[1]/span[1]/span[1]"));
 		element3.click();
-
+		// time delay
 		BrowserUtils.wait(1000);
 		WebElement upload = driver.findElement(By.xpath("//div[contains(@class,'bx-file-dialog-content-wrap')]"));
 		List<WebElement> listElement = upload.findElements(By.tagName("a"));
