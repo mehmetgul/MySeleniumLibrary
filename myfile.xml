@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+    <test name="order">
+        <classes>
+            <class name="bitrix24testng.UserStory1" />
+            <class name="bitrix24testng.UserStory2" />
+        </classes>
+    </test>
+
+</suite>
