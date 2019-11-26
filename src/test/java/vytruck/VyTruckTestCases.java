@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class VyTruckTestCases {
@@ -34,21 +35,11 @@ public class VyTruckTestCases {
 		driver.findElement(By.id("prependedInput")).sendKeys("storemanager85");
 		driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123", Keys.ENTER);
 		BrowserUtils.wait(5000);
-	/*	WebElement activitiesElement = driver.findElement(By.linkText("Activities"));
-		wait.until(ExpectedConditions.visibilityOf(activitiesElement));
-		wait.until(ExpectedConditions.elementToBeClickable(activitiesElement));
-		activitiesElement.click();
-		WebElement calendarEventsElement = driver.findElement(By.linkText("Calendar Events"));
-		wait.until(ExpectedConditions.visibilityOf(calendarEventsElement));
-		wait.until(ExpectedConditions.elementToBeClickable(calendarEventsElement));
-		calendarEventsElement.click();
-		WebElement loaderMask = driver.findElement(By.cssSelector("div[class='loader-mask shown']"));
-		wait.until(ExpectedConditions.invisibilityOf(loaderMask));*/
+
 	}
 
-
 	@Test(description = "Navigate to Activities-Calendar Events-Hover on three dots for testr meeting")
-	public void testCase1_1() {
+	public void testCase1Run() {
 		testCase1();
 
 	}
@@ -109,9 +100,48 @@ public class VyTruckTestCases {
 
 	}
 
+	@Test
+	public void testCase2run() {
+		testCase2();
+	}
+
 	public void testCase2() {
+		//Creating actions object to perform mouse hover
+		Actions a = new Actions(driver);
 
+		BrowserUtils.wait(1000);
+		//locating the Activites link
+		WebElement move = driver.findElement(By.xpath("//span[@class='title title-level-1'][contains(text(),'Activities')]"));
+		BrowserUtils.wait(1000);
 
+		//Moving out object on Activities link.
+		a.moveToElement(move).build().perform();
+		BrowserUtils.wait(1000);
+
+		//Clicking the activities link
+		driver.findElement(By.xpath("//span[contains(text(),'Calendar Events')]")).click();
+		BrowserUtils.wait(3000);
+
+		//Clicking the Grid Setting
+		driver.findElement(By.xpath("//i[@class='fa-cog hide-text']")).click();
+		BrowserUtils.wait(3000);
+
+		//counting the size of the table rows.
+		List<WebElement> row = driver.findElements(By.xpath("//div[@class='toolbar']//tr//td[1]"));
+		for (int i = 0; i < row.size(); i++) {
+			BrowserUtils.wait(1000);
+
+			WebElement name = driver.findElement(By.xpath("//div[@class='toolbar']//tr//td[1]"));
+			//finding the name which is not title and click the check box which is not title.
+			if (!row.get(i).getText().equalsIgnoreCase("Title")) {
+				row.get(i).click();
+
+			}
+		}
+		//Verifying the TITLE is available or not.
+		String name = driver.findElement(By.xpath("//thead[@class='grid-header']//span[@class='grid-header-cell__label'][contains(text(),'Title')]")).getText();
+		Assert.assertEquals(name, "TITLE");
+		BrowserUtils.wait(8000);
 	}
 
 	public void testCase3() {
