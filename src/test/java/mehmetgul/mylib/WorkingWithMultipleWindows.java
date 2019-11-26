@@ -2,6 +2,7 @@ package mehmetgul.mylib;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 
@@ -26,7 +27,8 @@ public class WorkingWithMultipleWindows {
 
 		//clicking the target link in web page
 		driver.findElement(By.xpath("//button[@id='new-tab-button']")).click();
-
+		WebElement element =driver.findElement(By.xpath("//button[@id='new-tab-button']"));
+		System.out.println("Element value : " +element);
 
 		//To handle different windows , we are using Set.
 		Set<String>  ids = driver.getWindowHandles();

@@ -1,4 +1,4 @@
-package vasyl.day14;
+package vytruck;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
