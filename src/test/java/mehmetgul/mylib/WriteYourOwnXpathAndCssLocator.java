@@ -10,8 +10,8 @@ public class WriteYourOwnXpathAndCssLocator {
 	$x("//input[@value='Log In'])
 2-	//*[@value='Log In']   * means accept any tag name which have the tag with the given value
 
-    //tagName[@contains(@attribute,'value')]
-    Example: <input name="username123">  xpath of this : //input[@contains(@name,'username')]
+    //tagName[contains(@attribute,'value')]
+    Example: <input name="username123">  xpath of this : //input[contains(@name,'username')]
     In above example name value is username123 but when we use contain we used only username.
 
 
