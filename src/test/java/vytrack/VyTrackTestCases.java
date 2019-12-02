@@ -18,6 +18,9 @@ public class VyTrackTestCases {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
+	//!!!! BrowserUtils.wait(1000); My waiting time calculates in MILISECONDS. !!!!
+	//if you are using SECONDS in your file. Change my miliseconds to seconds. Exp: 2000 to 2
+
 	@BeforeTest
 	public void setup() {
 		driver = BrowserFactory.getDriver("chrome");
@@ -108,6 +111,13 @@ public class VyTrackTestCases {
 
 	}
 
+	@AfterTest
+	public void teardown() {
+		BrowserUtils.wait(8000);
+		driver.quit();
+	}
+
+// All test case codes are below //
 
 	public void testCase1() {
 
@@ -739,11 +749,7 @@ public class VyTrackTestCases {
 
 	}
 
-	@AfterTest
-	public void teardown() {
-		BrowserUtils.wait(8000);
-		driver.quit();
-	}
+
 
 
 }
