@@ -41,7 +41,7 @@ public class AutoSuggestDropDown {
 		//We are executing the script and getting the value and assigning that value to a string
 		String text = (String) js.executeScript(script);
 
-		System.out.println(text);
+		System.out.println("Text is : "+ text);
 
 		int i=0;
 
@@ -51,7 +51,7 @@ public class AutoSuggestDropDown {
 			BrowserUtils.wait(1000);
 			driver.findElement(By.xpath("//input[@id='fromPlaceName']")).sendKeys(Keys.DOWN);
 			text = (String) js.executeScript(script);
-			System.out.println(text);
+			System.out.println("Inside while loop : " + text);
 
 			//After finding the desired value, click on it.
 			if(text.equalsIgnoreCase("BANGALORE INTERNATION AIRPORT")){
