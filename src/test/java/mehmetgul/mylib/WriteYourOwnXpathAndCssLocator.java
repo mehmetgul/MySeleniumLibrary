@@ -14,6 +14,8 @@ public class WriteYourOwnXpathAndCssLocator {
     Example: <input name="username123">  xpath of this : //input[contains(@name,'username')]
     In above example name value is username123 but when we use contain we used only username.
 
+we used below on header menu which is having common class. When we change the dashboard name to other menu names it works
+ 3- //*[normalize-space()='Dashboard' and @class='title-title-level-1']
 
 
 	CSS Locator:
