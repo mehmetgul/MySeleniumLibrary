@@ -5,14 +5,16 @@ package mehmetgul.mylib.actionclass;
 //Context click on element
 // Double click on elemant
 //Drag and Dropping element
-//This is added from remote repo
+//This is added from remote repo .....
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utils.BrowserFactory;
-//I added this from local repo gggg
+
+//I added this from remote
+
 public class ActionsClass {
 	static WebDriver driver;
 
