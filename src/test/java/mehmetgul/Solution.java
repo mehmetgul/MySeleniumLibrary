@@ -8,7 +8,7 @@ public class Solution {
 	static Change change = new Change();
 
 	static Change optimalChange(long s){
-		if(s==1){
+		if(s==11){ //change by dev 2 from my system
 			change.coin2=0;
 			change.bill5=0;
 			change.bill10=0;
