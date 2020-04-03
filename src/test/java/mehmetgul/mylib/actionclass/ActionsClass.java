@@ -5,7 +5,7 @@ package mehmetgul.mylib.actionclass;
 //Context click on element
 // Double click on elemant
 //Drag and Dropping element
-
+//This is added from remote repo
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
