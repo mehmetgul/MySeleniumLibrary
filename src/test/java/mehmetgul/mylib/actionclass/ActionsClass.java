@@ -18,9 +18,7 @@ import utils.BrowserFactory;
 public class ActionsClass {
 	static WebDriver driver;
 
-	//static WebDriver driver;
-	////static WebDriver driver;////
-	////static WebDriver driver;
+
 	public static void main(String[] args) throws InterruptedException {
 		// setting up the chrome driver
 		driver = new BrowserFactory().getDriver("chrome");
