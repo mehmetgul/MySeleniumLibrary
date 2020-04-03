@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utils.BrowserFactory;
-
+//I added this from local repo
 public class ActionsClass {
 	static WebDriver driver;
 
@@ -26,7 +26,7 @@ public class ActionsClass {
 
 		Thread.sleep(3000);
 
-		//using action class to mouseOver on the element
+		//using action class to mousehover on the element
 		Actions a = new Actions(driver);
 
 		// moving to specific element. We need to use build().perform()

@@ -19,10 +19,10 @@ public class HandleSSLcertificates {
 		dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
 
 		//Below is our local browser
-		ChromeOptions co = new ChromeOptions();
-		co.merge(dc);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.merge(dc);
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(co);
+		WebDriver driver = new ChromeDriver(chromeOptions);
 
 
 

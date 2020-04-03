@@ -29,7 +29,6 @@ public class JavaAlerts {
 		BrowserUtils.wait(2000);
 		//Accepts =ok button.
 		driver.switchTo().alert().accept();
-
 		//dismiss method is to click cancel button.
 		//driver.switchTo().alert().dismiss();
 

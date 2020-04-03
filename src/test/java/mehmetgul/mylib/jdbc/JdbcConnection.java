@@ -1,28 +1,42 @@
 package mehmetgul.mylib.jdbc;
-/*
+
+
+import org.testng.annotations.Test;
+
 import java.sql.*;
-import java.sql.SQLException;
+
 public class JdbcConnection {
 
 	public JdbcConnection() throws SQLException {
 	}
 
-	public void jdbcConnect() throws ClassNotFoundException, SQLException{
-	}
-	 Class.forName("com.mysql.jdbc.Driver");
-	Connection con = DriverManager.getConnection("url", "user", "password");
-	Statement st = con.createStatement();
-	ResultSet rs = st.executeQuery("select * from student"); //Store the results
-       while(rs.next())
+	@Test
+	public void jdbcConnect() throws ClassNotFoundException, SQLException {
+		String url = "jdbc:mysql://localhost:3036/emp";
 
-	{
-		try {
-			System.out.println(rs.getInt(1) + " " + rs.getString(2));
-		} catch (SQLException e) {
-			e.printStackTrace();
+		//Database Username
+		String username = "root";
+
+		//Database Password
+		String password = "password";
+
+		//Query to Execute
+		String query = "select *  from employee;";
+
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection(url, username, password);
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery("select * from student"); //Store the results
+		while (rs.next()) {
+			try {
+				System.out.println(rs.getInt(1) + " " + rs.getString(2));
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
+		st.close();
+		con.close();
 	}
-       st.close();
-       con.close();
 }
-}*/
+
+

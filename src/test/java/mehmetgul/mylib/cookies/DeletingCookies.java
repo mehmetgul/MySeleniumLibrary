@@ -16,11 +16,11 @@ public class DeletingCookies {
 		Set<Cookie> a = driver.manage().getCookies();
 		System.out.println(a);
 		//Delete all the cookies
-		driver.manage().deleteAllCookies();
+		//driver.manage().deleteAllCookies();
 
 		//delete specific cookies
-		driver.manage().deleteCookieNamed("examplename");
+		//driver.manage().deleteCookieNamed("examplename");
 
-		driver.get("http://www.google.com");
+		//driver.get("http://www.google.com");
 	}
 }
