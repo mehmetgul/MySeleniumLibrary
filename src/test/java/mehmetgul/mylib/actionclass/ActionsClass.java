@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utils.BrowserFactory;
-//I added this from local repo
+//I added this from remote
 public class ActionsClass {
 	static WebDriver driver;
 
