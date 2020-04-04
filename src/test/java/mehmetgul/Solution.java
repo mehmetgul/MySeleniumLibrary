@@ -2,7 +2,7 @@ package mehmetgul;
 class Change{
 	long coin2=0;
 	long bill5=0;
-	long bill10=0;
+	long bill10=1; // I am changing this user from online
 }
 public class Solution {
 	static Change change = new Change();
