@@ -2,8 +2,8 @@ package mehmetgul;
 class Change{
 	long coin2=0;
 	long bill5=0;
+	long bill10=0; // I am from local
 
-	long bill10=0; // I am from remote repo
 
 
 }
@@ -38,7 +38,8 @@ public class Solution {
 		}
 
 
-// this is also another commit from remote repo
+// this is also from local changegit
+
 		return change;
 	}
 
