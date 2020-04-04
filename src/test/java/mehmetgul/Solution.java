@@ -2,7 +2,7 @@ package mehmetgul;
 class Change{
 	long coin2=0;
 	long bill5=0;
-	long bill10=0; // I am from local systm
+	long bill10=0; // I am from online Serkan
 }
 public class Solution {
 	static Change change = new Change();
