@@ -5,7 +5,9 @@ class Change{
 	long bill10=0; // I am from local
 	//hey I am here again 
 
-
+//This is Serkan from online
+	
+	//This is continue online
 
 }
 public class Solution {
@@ -24,7 +26,7 @@ public class Solution {
 			change.bill10=0;
 			change.bill5=s/5;
 			change.coin2=0;
-
+// this is extra online
 
 		}else if(s%2==0){
 			if(s/10<0){
