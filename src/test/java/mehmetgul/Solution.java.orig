@@ -2,12 +2,20 @@ package mehmetgul;
 class Change{
 	long coin2=0;
 	long bill5=0;
-
+<<<<<<< HEAD
 	long bill10=0; // I am from local
 	//hey I am here again 
 
+//This is Serkan from online
+	
+	//This is continue online
+=======
+	long bill10=0; // I am from local mehmet
 	//hey I am here again mehmet
+
 // this mehmet from local
+>>>>>>>  local commit
+
 	// this is again mehmet
 }
 public class Solution {
