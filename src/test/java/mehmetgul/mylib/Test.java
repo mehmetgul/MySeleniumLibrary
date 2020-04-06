@@ -40,4 +40,5 @@ public class Test {
 
 		System.out.println(betterCompression("a3c9b2c1"));
 	}
+	//...
 }
