@@ -55,6 +55,7 @@ public class Test {
 		System.out.println(betterCompression("a3c9b2c1"));
 	}
 
+
 	@org.testng.annotations.Test
 	public void testNumbers() {
 		WebDriverManager.chromedriver().setup();
@@ -222,4 +223,7 @@ public class Test {
 		driver.quit();
 
 	}
+
+	//...
+
 }
