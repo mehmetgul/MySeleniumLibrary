@@ -1,4 +1,4 @@
-package mehmetgul.mylib;
+package mehmetgul.mylib.xxxothers;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;

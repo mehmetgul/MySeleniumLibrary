@@ -1,4 +1,4 @@
-package mehmetgul;
+package mehmetgul.mylib.xxxothers;
 class Change{
 	long coin2=0;
 	long bill5=0;

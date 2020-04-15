@@ -1,4 +1,4 @@
-package mehmetgul.mylib;
+package mehmetgul.mylib.xxxothers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.Arrays;
 import java.util.List;
 
 // I am here from local
@@ -223,6 +224,12 @@ public class Test {
 		driver.quit();
 
 	}
+	@org.testng.annotations.Test
+	public void reoveDuplcates(){
+		int[] arr= {1,2,2,7,7,4,4,9,9,3,3,3,5,5,5};
+		int[] afterFilter=Arrays.stream(arr).distinct().toArray();
+		System.out.println(Arrays.toString(afterFilter));
+	}
 
 	//this is feature 1  dfsdfds
 
@@ -233,7 +240,6 @@ public class Test {
 
 //....
 //.....
-
 
 //This is feauture 3
 
