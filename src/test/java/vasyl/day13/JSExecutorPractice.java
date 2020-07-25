@@ -42,6 +42,7 @@ public class JSExecutorPractice {
 //        var footer = document.getElementById('page-footer');
 //        footer.scrollIntoView(true);
 
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		//this script must scroll, until link element is visible
 		//once link element will be visible, it will stop scrolling

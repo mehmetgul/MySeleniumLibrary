@@ -92,4 +92,21 @@ public class JavaTest {
 		stream.forEach(str -> System.out.print(str + " "));
 	}
 
+	@Test
+	public void test(){
+		int n=4;
+		int[] arr= {2,4,5};
+		int[] arr1={25,10};
+		int[] arr2={20,43,15,32};
+		int c=1;
+		for (int i=0;i<n;i++){
+			c = c*arr2[i];
+		}
+		System.out.println(" this is total : "+ c);
+		String result= String.valueOf(c);
+		int lengthOfNumber=result.length();
+		result=result.substring(lengthOfNumber-2,lengthOfNumber);
+		System.out.println(result);
+	}
+
 }

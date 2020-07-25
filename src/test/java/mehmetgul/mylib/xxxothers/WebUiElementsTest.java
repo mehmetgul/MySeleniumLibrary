@@ -53,6 +53,7 @@ public class WebUiElementsTest {
 		//To Choose number of adults
 		Select adult = new Select(driver.findElement(By.xpath("//select[@id='ctl00_mainContent_ddl_Adult']")));
 		adult.selectByValue("3");
+		
 
 		BrowserUtils.wait(2000);
 

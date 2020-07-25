@@ -1,14 +1,10 @@
 package btrix24;
 
-import btrix24.Credentials;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
-
-import java.util.List;
 //1. User should be able to click on upload files icon to upload files and pictures from local disks,
 // download from external drive, select documents from bixtrix24, and create files to upload.
 //2. User should be able to add users from selecting contact from E-mail user, Employees and Departments and Recent contact lists.
@@ -29,13 +25,13 @@ public class UserStory1 {
 		//uploadFilesAndImages_1();
 		//	selectDocumentFromBitrix24_1();
 		//selectContact();
-		attachLink();
+		//attachLink();
 		//instertVideo();
 		//createQuote();
 		//addMention();
 		//visualEditor();
 		//messageTopic();
-		//recordVideo();
+		recordVideo();
 
 	}
 

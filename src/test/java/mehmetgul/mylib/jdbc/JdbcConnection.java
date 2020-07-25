@@ -27,9 +27,11 @@ public class JdbcConnection {
 		Connection con = DriverManager.getConnection(url, username, password);
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery("select * from student"); //Store the results
+
 		while (rs.next()) {
 			try {
 				System.out.println(rs.getInt(1) + " " + rs.getString(2));
+
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
