@@ -2,7 +2,7 @@ package mehmetgul.mylib.javaalerts;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utils.BrowserFactory;
+import mehmetgul.utils.BrowserFactory;
 import utils.BrowserUtils;
 
 //Handling javaScript Alerts.

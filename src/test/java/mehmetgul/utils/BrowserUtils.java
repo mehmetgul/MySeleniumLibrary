@@ -4,7 +4,7 @@ public class BrowserUtils {
 
 
 	//It will be used to pause our test execution
-	//just provide number of seconds as a parameter
+	//just provide number of miliseconds as a parameter
 	/**
 	 * This method will put on pause execution
 	 * @param   miliseconds

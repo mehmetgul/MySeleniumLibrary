@@ -5,10 +5,10 @@ import org.apache.commons.mail.SimpleEmail;
 public class SendEmails {
 
 
-       /*
+       /**
             first Step:
                 go to  :
-                     https://myaccount.google.com/lesssecureapps?utm_source=google-account&utm_medium=web
+              TODO       https://myaccount.google.com/lesssecureapps?utm_source=google-account&utm_medium=web
                         Make sure that your google account allows third part app
          */
 
@@ -20,7 +20,7 @@ public class SendEmails {
 				Subject = "This is from MEhmet";
 
 
-		String[] Receivers = {"mehmetgulusa@gmail.com", "mehmetgul@gmail.com"};
+		String[] Receivers = {"someemail1@gmail.com", "someemail2@gmail.com"};
 
 		int times = 3;
 		while (times > 0) {

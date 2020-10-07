@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utils.BrowserFactory;
+import mehmetgul.utils.BrowserFactory;
 import utils.BrowserUtils;
 
 // 1- Handling iFrames: iFrames are different pages which are embedded inside the pages.

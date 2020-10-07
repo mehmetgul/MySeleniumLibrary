@@ -1,5 +1,6 @@
 package mehmetgul.mylib.waits;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,10 +14,11 @@ import java.util.function.Function;
 
 public class FluentWaitClass {
 	protected WebDriver driver;
+
 	@Test
 	public void guru99tutorials() throws InterruptedException
 	{
-		System.setProperty ("webdriver.chrome.driver",".\\chromedriver.exe" );
+		WebDriverManager.chromedriver().setup();
 		String eTitle = "Demo Guru99 Page";
 		String aTitle = "" ;
 		driver = new ChromeDriver();

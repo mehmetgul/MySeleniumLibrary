@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import utils.BrowserFactory;
+import mehmetgul.utils.BrowserFactory;
 import utils.BrowserUtils;
 
 //Auto suggestive drop down is a drop down which is suggesting based on your entry.

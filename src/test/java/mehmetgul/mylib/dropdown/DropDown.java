@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.BrowserFactory;
+import mehmetgul.utils.BrowserFactory;
 import utils.BrowserUtils;
 
 public class DropDown {
