@@ -124,12 +124,7 @@
             <artifactId>iedriver-bin</artifactId>
             <version>3.141</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
+
 
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -172,13 +167,16 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.19</version>
         </dependency>
-
-
-
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>2.8.0</version>
+        </dependency>
+        <!-- PDF file dependecy -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.4</version>
         </dependency>
 
     </dependencies>
