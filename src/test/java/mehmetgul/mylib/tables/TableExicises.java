@@ -1,10 +1,11 @@
 package mehmetgul.mylib.tables;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import mehmetgul.utils.BrowserFactory;
-import utils.BrowserUtils;
+
 
 public class TableExicises {
 

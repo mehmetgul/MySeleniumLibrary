@@ -1,10 +1,11 @@
 package mehmetgul.mylib.multiplewindows;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import mehmetgul.utils.BrowserFactory;
-import utils.BrowserUtils;
+
 
 import java.util.Iterator;
 import java.util.Set;

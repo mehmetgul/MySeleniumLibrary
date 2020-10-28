@@ -1,9 +1,10 @@
 package mehmetgul.mylib.locators;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import mehmetgul.utils.BrowserFactory;
-import utils.BrowserUtils;
+
 
 // Downloading the chropath extention to chrome browser and getting the xpath from cropath.
 

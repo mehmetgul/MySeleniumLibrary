@@ -1,11 +1,12 @@
 package mehmetgul.mylib.dropdown;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import mehmetgul.utils.BrowserFactory;
-import utils.BrowserUtils;
+
 
 //Auto suggestive drop down is a drop down which is suggesting based on your entry.
 //how can we handle this? This suggestions are dynamic and elements are hidden.

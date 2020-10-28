@@ -1,9 +1,10 @@
 package mehmetgul.mylib.framesanddragdrop;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import mehmetgul.utils.BrowserFactory;
-import utils.BrowserUtils;
+
 
 //!!!!!!!!!important thing about frames!!!!!
 //to deal with frames you need to switch the frame but if there is multiple frame and

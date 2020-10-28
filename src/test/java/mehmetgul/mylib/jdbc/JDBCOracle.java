@@ -1,7 +1,7 @@
 package mehmetgul.mylib.jdbc;
 
+import mehmetgul.utils.ConfigurationReader1;
 import org.testng.annotations.Test;
-import utils.ConfigurationReader;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -161,9 +161,9 @@ public class JDBCOracle {
 	@Test
 	public void test10() throws SQLException {
 
-		String userName = ConfigurationReader.getProperty("userName");
-		String passWord = ConfigurationReader.getProperty("passWord");
-		String urlDB = ConfigurationReader.getProperty("urlDB");
+		String userName = ConfigurationReader1.getProperty("userName");
+		String passWord = ConfigurationReader1.getProperty("passWord");
+		String urlDB = ConfigurationReader1.getProperty("urlDB");
 
 		String query = "Select * from Employees";
 
@@ -189,9 +189,9 @@ public class JDBCOracle {
 	@Test
 	public void test11() throws SQLException {
 
-		String userName = ConfigurationReader.getProperty("userName");
-		String passWord = ConfigurationReader.getProperty("passWord");
-		String urlDB = ConfigurationReader.getProperty("urlDB");
+		String userName = ConfigurationReader1.getProperty("userName");
+		String passWord = ConfigurationReader1.getProperty("passWord");
+		String urlDB = ConfigurationReader1.getProperty("urlDB");
 
 		String query = "Select * from Employees";
 

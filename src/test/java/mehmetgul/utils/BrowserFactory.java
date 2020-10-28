@@ -21,12 +21,12 @@ public class BrowserFactory {
 	//method will return corresponded webdriver object
 	// if browser = chrome, then return chromedriver object
 	public synchronized static WebDriver getDriver(String browser) {
-/*
-* In simple words a static synchronized method will lock the class instead of the object,
-* and it will lock the class because the keyword static means: "class instead of instance".
-* The keyword synchronized means that only one thread can access the method at a time.
-* And static synchronized mean:
- */
+		/*
+		 * In simple words a static synchronized method will lock the class instead of the object,
+		 * and it will lock the class because the keyword static means: "class instead of instance".
+		 * The keyword synchronized means that only one thread can access the method at a time.
+		 * And static synchronized mean:
+		 */
 		if (driver == null) {
 			// first we check if the value from xml file is null or not
 			// if the value from xml file NOT null we use
@@ -77,4 +77,3 @@ public class BrowserFactory {
 	}
 
 }
-

@@ -1,7 +1,6 @@
-package utils;
+package mehmetgul.utils;
 
 public class BrowserUtils {
-
 
 	//It will be used to pause our test execution
 	//just provide number of miliseconds as a parameter
