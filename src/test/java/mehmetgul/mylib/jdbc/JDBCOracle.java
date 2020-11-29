@@ -26,6 +26,8 @@ public class JDBCOracle {
 		Statement statement = connection.createStatement();
 
 		ResultSet resultSet = statement.executeQuery(query);
+		//ResultSetMetaData resultSetMetaData = (ResultSetMetaData) statement.executeQuery(query);
+		//resultSetMetaData.getColumnCount();
 
 		System.out.println(resultSet);
 	}
@@ -185,7 +187,6 @@ public class JDBCOracle {
 	}
 
 
-
 	@Test
 	public void test11() throws SQLException {
 
@@ -195,18 +196,18 @@ public class JDBCOracle {
 
 		String query = "Select * from Employees";
 
-		Connection connection=DriverManager.getConnection(urlDB,userName,passWord);
-		Statement statement=connection.createStatement();
-		ResultSet resultSet=statement.executeQuery(query);
+		Connection connection = DriverManager.getConnection(urlDB, userName, passWord);
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery(query);
 
-		Map<String,Integer> map = new LinkedHashMap<>();
-		while (resultSet.next()){
-			String firstName=resultSet.getString("first_name");
-			int salary=resultSet.getInt("salary");
-			map.put(firstName,salary);
+		Map<String, Integer> map = new LinkedHashMap<>();
+		while (resultSet.next()) {
+			String firstName = resultSet.getString("first_name");
+			int salary = resultSet.getInt("salary");
+			map.put(firstName, salary);
 
-			if(salary>=17000){
-				System.out.println(firstName+" "+salary);
+			if (salary >= 17000) {
+				System.out.println(firstName + " " + salary);
 			}
 
 		}

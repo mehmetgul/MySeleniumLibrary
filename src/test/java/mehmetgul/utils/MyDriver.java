@@ -10,10 +10,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MyDriver {
     private static ThreadLocal<WebDriver> DriverPool = new ThreadLocal<>();
@@ -31,6 +34,30 @@ public class MyDriver {
                 case "chrome":
 
                     WebDriverManager.chromedriver().setup();
+
+
+                    /**
+                     *We have disabled the cookies in below ChromeOptions
+                     * You need to add this feature to your configuration.properties
+                     * Add cookiesEnableDisable=2  (disable the cookies)
+                     * Add cookiesEnableDisable =0  (enable the cookies)
+                     */
+                   /* DesiredCapabilities caps = new DesiredCapabilities();
+
+                    ChromeOptions options = new ChromeOptions();
+                    Map<String, Object> prefs = new HashMap<String, Object>();
+                    Map<String, Object> profile = new HashMap<String, Object>();
+                    Map<String, Object> contentSettings = new HashMap<String, Object>();
+
+                    contentSettings.put("cookies",ConfigurationReader.getProperty("cookiesEnableDisable"));
+                    profile.put("managed_default_content_settings",contentSettings);
+                    prefs.put("profile",profile);
+                    options.setExperimentalOption("prefs",prefs);
+                    caps.setCapability(ChromeOptions.CAPABILITY,options);
+
+                    DriverPool.set(new ChromeDriver(options));*/
+
+
                     DriverPool.set(new ChromeDriver());
                     break;
                 case "chrome_headless":
