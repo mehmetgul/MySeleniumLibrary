@@ -29,7 +29,7 @@ public class ExcelFileWithArrayList {
 		ArrayList<String> arrayList = new ArrayList<>(); //creating arraylist to store the data
 
 		//Connecting the excel file.
-		FileInputStream fis = new FileInputStream("TestData.xlsx");
+		FileInputStream fis = new FileInputStream("src/test/java/mehmetgul/mylib/excelfile/TestData1.xlsx");
 
 		//Create object for XSSFWorkbook class
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -39,7 +39,7 @@ public class ExcelFileWithArrayList {
 
 		//finding desired excel sheet name
 		for (int i = 0; i < sheet; i++) {
-			if (workbook.getSheetName(i).equalsIgnoreCase("Sheet1")) {
+			if (workbook.getSheetName(i).equalsIgnoreCase("Sheet2")) {
 
 				XSSFSheet sheets = workbook.getSheetAt(i);
 
@@ -92,10 +92,10 @@ public class ExcelFileWithArrayList {
 	@Test
 	public void dataDriven() throws IOException {
 		ExcelFileWithArrayList excelArray = new ExcelFileWithArrayList();
-		ArrayList data = excelArray.getData("Add Profile");
+		ArrayList data = excelArray.getData("bbb");
 		System.out.println(data.get(0));
 		System.out.println(data.get(1));
-		System.out.println(data.get(2));
-		System.out.println(data.get(3));
+	//	System.out.println(data.get(2));
+	//	System.out.println(data.get(3));
 	}
 }

@@ -34,6 +34,7 @@ public class BrowserFactory {
 
 			if ("chrome".equals(browser)) {
 				WebDriverManager.chromedriver().setup();
+
 				driver = new ChromeDriver();
 			} else if ("chromeHeadless".equals(browser)) {
 				WebDriverManager.chromedriver().setup();

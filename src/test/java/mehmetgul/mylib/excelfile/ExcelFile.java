@@ -28,7 +28,7 @@ public class ExcelFile {
 		ArrayList<String> arrayList = new ArrayList<>(); //creating arraylist to store the data
 
 		//Connecting the excel file.
-		FileInputStream fis = new FileInputStream("TestData.xlsx");
+		FileInputStream fis = new FileInputStream("TestData1.xlsx");
 
 		//Create object for XSSFWorkbook class
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
