@@ -1,9 +1,11 @@
 package mehmetgul.mylib.framesanddragdrop;
 
+import mehmetgul.utils.BrowserUtils;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utils.BrowserFactory;
-import utils.BrowserUtils;
+import mehmetgul.utils.BrowserFactory;
+
 
 //!!!!!!!!!important thing about frames!!!!!
 //to deal with frames you need to switch the frame but if there is multiple frame and
@@ -81,12 +83,34 @@ public class IamNotARobot {
 		driver.findElement(By.xpath("//*[@id=\"recaptcha-verify-button\"]")).click();
 
 	}
+	@Test
+	public  void test() {
+
+
+		//setting up chrome driver
+		WebDriver driver = BrowserFactory.getDriver("chrome");
+
+		//opening the target url
+		driver.get("https://test.crowdstreet.com/invexp/accounts/create-account/");
+		// it will call the reusable method to switch to frame and click that with given parameters.
+		int number = findTheNumberOfFrame(driver, By.xpath("//*[@id=\"recaptcha-anchor\"]/div[1]"));
+		System.out.println("frame num: "+number);
+		BrowserUtils.wait(2000);
+
+		driver.switchTo().frame(number);
+		driver.findElement(By.xpath("//*[@id=\"recaptcha-anchor\"]/div[1]")).click();
+
+
+
+	}
+	//*[@id="recaptcha-anchor"]/div[4]
 
 	public static int findTheNumberOfFrame(WebDriver driver, By by) {
 
-		int i;
+		 int i=0;
+int b;
 		int frameCount = driver.findElements(By.tagName("iframe")).size();
-		System.out.println(frameCount);
+		System.out.println("Frame count : " +frameCount);
 
 		for (i = 0; i < frameCount; i++) {
 			driver.switchTo().frame(i);
@@ -94,12 +118,12 @@ public class IamNotARobot {
 
 			if (count > 0) {
 				//driver.findElement(by).click();
-				break;
+				driver.switchTo().defaultContent();
+				return i;
+
 			} else {
 				System.out.println("continue looping");
 			}
-
-
 		}
 		// this is to switching back to default page from iframe.
 		driver.switchTo().defaultContent();

@@ -1,10 +1,10 @@
 package mehmetgul.mylib.waits;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import utils.BrowserFactory;
-import utils.BrowserUtils;
+import mehmetgul.utils.BrowserFactory;
 import java.util.concurrent.TimeUnit;
 
 //Implicit wait till the given time limit to load the page.

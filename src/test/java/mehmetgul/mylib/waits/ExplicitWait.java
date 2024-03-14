@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.BrowserFactory;
+import mehmetgul.utils.BrowserFactory;
 
 //Using explicit wait in specific location
 // it waits in given limits until the target loads.

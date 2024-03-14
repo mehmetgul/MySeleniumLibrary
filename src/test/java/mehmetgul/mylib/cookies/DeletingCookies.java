@@ -2,7 +2,7 @@ package mehmetgul.mylib.cookies;
 
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
-import utils.BrowserFactory;
+import mehmetgul.utils.BrowserFactory;
 
 import java.util.Set;
 

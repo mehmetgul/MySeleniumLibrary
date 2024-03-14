@@ -1,11 +1,12 @@
 package mehmetgul.mylib.framesanddragdrop;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utils.BrowserFactory;
-import utils.BrowserUtils;
+import mehmetgul.utils.BrowserFactory;
+
 
 // 1- Handling iFrames: iFrames are different pages which are embedded inside the pages.
 // 2- Handling drag and drop using dragAndDrop () method.

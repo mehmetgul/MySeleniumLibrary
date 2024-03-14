@@ -1,9 +1,10 @@
 package mehmetgul.mylib.locators;
 
+import mehmetgul.utils.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utils.BrowserFactory;
-import utils.BrowserUtils;
+import mehmetgul.utils.BrowserFactory;
+
 
 // Downloading the chropath extention to chrome browser and getting the xpath from cropath.
 
@@ -12,8 +13,10 @@ public class ChropathTest {
 
 
 		WebDriver driver = BrowserFactory.getDriver("chrome");
-		driver.get("http://www.google.com");
-		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("merhaba");
+		driver.get("https://www.ryanair.com/us/en");
+		driver.findElement(By.xpath("//span[contains(text(),'Log in')]")).click();
+		BrowserUtils.wait(3000);
+		driver.findElement(By.xpath("//input[@placeholder='email@email.com']")).sendKeys("merhaba");
 		BrowserUtils.wait(3000);
 
 		driver.get("http://www.qaclickacademy.com/interview.php");

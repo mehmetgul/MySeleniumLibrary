@@ -1,7 +1,7 @@
 package mehmetgul.mylib.jdbc;
 
+import mehmetgul.utils.ConfigurationReader1;
 import org.testng.annotations.Test;
-import utils.ConfigurationReader;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -26,6 +26,8 @@ public class JDBCOracle {
 		Statement statement = connection.createStatement();
 
 		ResultSet resultSet = statement.executeQuery(query);
+		//ResultSetMetaData resultSetMetaData = (ResultSetMetaData) statement.executeQuery(query);
+		//resultSetMetaData.getColumnCount();
 
 		System.out.println(resultSet);
 	}
@@ -161,9 +163,9 @@ public class JDBCOracle {
 	@Test
 	public void test10() throws SQLException {
 
-		String userName = ConfigurationReader.getProperty("userName");
-		String passWord = ConfigurationReader.getProperty("passWord");
-		String urlDB = ConfigurationReader.getProperty("urlDB");
+		String userName = ConfigurationReader1.getProperty("userName");
+		String passWord = ConfigurationReader1.getProperty("passWord");
+		String urlDB = ConfigurationReader1.getProperty("urlDB");
 
 		String query = "Select * from Employees";
 
@@ -185,28 +187,27 @@ public class JDBCOracle {
 	}
 
 
-
 	@Test
 	public void test11() throws SQLException {
 
-		String userName = ConfigurationReader.getProperty("userName");
-		String passWord = ConfigurationReader.getProperty("passWord");
-		String urlDB = ConfigurationReader.getProperty("urlDB");
+		String userName = ConfigurationReader1.getProperty("userName");
+		String passWord = ConfigurationReader1.getProperty("passWord");
+		String urlDB = ConfigurationReader1.getProperty("urlDB");
 
 		String query = "Select * from Employees";
 
-		Connection connection=DriverManager.getConnection(urlDB,userName,passWord);
-		Statement statement=connection.createStatement();
-		ResultSet resultSet=statement.executeQuery(query);
+		Connection connection = DriverManager.getConnection(urlDB, userName, passWord);
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery(query);
 
-		Map<String,Integer> map = new LinkedHashMap<>();
-		while (resultSet.next()){
-			String firstName=resultSet.getString("first_name");
-			int salary=resultSet.getInt("salary");
-			map.put(firstName,salary);
+		Map<String, Integer> map = new LinkedHashMap<>();
+		while (resultSet.next()) {
+			String firstName = resultSet.getString("first_name");
+			int salary = resultSet.getInt("salary");
+			map.put(firstName, salary);
 
-			if(salary>=17000){
-				System.out.println(firstName+" "+salary);
+			if (salary >= 17000) {
+				System.out.println(firstName + " " + salary);
 			}
 
 		}

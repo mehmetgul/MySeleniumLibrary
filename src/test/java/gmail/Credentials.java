@@ -2,7 +2,7 @@ package gmail;
 
 
 public class Credentials {
-	private String userName = "mehmetgul@gmail.com";
+	private String userName = "myemail@gmail.com";
 	private String passWord = "MyPassword123@";
 	public String getUserName(){
 		return userName;
